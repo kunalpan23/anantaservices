@@ -1,6 +1,6 @@
 import '/style/index.scss';
 
-window.addEventListener('DOMContentLoaded', () => {
+$(window).on('load', e => {
     const wow = new WOW({
         boxClass: 'wow', // default
         animateClass: 'animated', // default
@@ -10,3 +10,5 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     wow.init();
 });
+
+$(window).on('scroll', e => {});

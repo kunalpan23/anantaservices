@@ -1,0 +1,27 @@
+&__aboutus {
+    padding: 100px 10px;
+    box-sizing: border-box;
+    background: #15a7d4 url(/img/aboutus-bg.jpg) center / cover no-repeat;
+    background-attachment: fixed;
+
+    &--content {
+        width: 615px;
+        background: $white;
+        text-align: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+        & > h3 {
+            font-size: 40px;
+            font-weight: 700;
+            font-family: Source Sans Pro;
+            text-transform: uppercase;
+            margin: 50px 0;
+        }
+
+        & > p {
+            color: #20303c;
+            margin: 0 40px 40px;
+        }
+    }
+}
