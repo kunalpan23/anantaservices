@@ -1,0 +1,56 @@
+&__ourteam {
+    padding: 50px 10px;
+
+    &--content {
+        width: 1000px;
+        padding: 0 10px;
+
+        &-heading {
+            font-size: 32px;
+            line-height: 40px;
+            color: $black;
+            font-weight: 700;
+            margin: 0 0 30px 0;
+        }
+
+        &-item {
+            width: 100%;
+
+            & > li {
+                height: 180px;
+                width: 230px;
+                background: #ddd;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+
+                .avatar {
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 50%;
+                    background: $primary;
+
+                    &__detail {
+                        &-name {
+                            font-size: 18px;
+                            font-weight: 700;
+                            line-height: 22px;
+                            margin: 10px 0 0 0;
+                        }
+
+                        &-description {
+                            font-size: 12px;
+                            line-height: 14px;
+                            color: #3a3636;
+                            font-weight: 500;
+                            margin: 5px 0 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
