@@ -1,0 +1,188 @@
+// Calling Custom css reset
+@import 'reset.scss';
+// Calling Custom flex Classes
+@import 'flex.scss';
+
+// Calling Vendor Css
+@import 'animation.scss';
+
+html,
+body {
+    font-size: 14px;
+    line-height: 1.47;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    min-height: 100%;
+}
+
+// Common styles
+
+$white: #fff;
+$black: #000;
+$primary: #15a7d4;
+$temp: #144d65;
+
+// Start for the Main Container
+.wrap {
+    position: relative;
+    overflow: hidden;
+
+    &__topcontent {
+        // This is going to have a background image for the company
+        // brand name
+
+        height: 100vh;
+        background: url(/img/bg-main.jpg) top center / cover no-repeat;
+        background-attachment: fixed;
+
+        .header {
+            height: 70px;
+            background: rgba(255, 255, 255, 0.78);
+            box-shadow: 0 0 15px -2px rgba($color: $black, $alpha: 0.7);
+
+            &__inner {
+                width: 1200px;
+                padding: 0 10px;
+                box-sizing: border-box;
+
+                &--logo {
+                    height: 70px;
+
+                    & > img {
+                        height: 50px;
+                    }
+                }
+
+                &--nav {
+                    &-list {
+                        & > li {
+                            position: relative;
+                            transition: ease all 250ms;
+                            overflow: hidden;
+
+                            & > a {
+                                padding: 25px 10px;
+                                position: relative;
+                                display: block;
+                                color: $primary;
+                                font-weight: 700;
+
+                                &:hover {
+                                    color: $temp;
+                                }
+
+                                &.active:after,
+                                &:hover::after {
+                                    content: '';
+                                    position: absolute;
+                                    height: 3px;
+                                    right: 0;
+                                    left: 0;
+                                    bottom: 0;
+                                    background: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &--atf {
+            padding-top: 150px;
+            height: 100%;
+            box-sizing: border-box;
+
+            .intro {
+                width: 1200px;
+                padding: 0 10px;
+                box-sizing: border-box;
+                margin: auto;
+
+                &__content {
+                    &-heading {
+                        font-size: 45px;
+                        color: $white;
+                        line-height: 40px;
+                        font-family: 'Source Sans Pro';
+                        font-weight: 700;
+                        text-shadow: 4px -2px 10px rgba(0, 0, 0, 0.53);
+
+                        & > span {
+                            color: $primary;
+                        }
+                    }
+
+                    &-sub_heading {
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: $white;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            &-btn {
+                height: 100%;
+                box-sizing: border-box;
+                padding-bottom: 20px;
+
+                & > a {
+                    box-sizing: border-box;
+                    appearance: none;
+                    background-color: transparent;
+                    border: 2px solid $black;
+                    border-radius: 0.6em;
+                    color: $black;
+                    cursor: pointer;
+                    display: flex;
+                    align-self: center;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1;
+                    margin: 20px;
+                    padding: 1.2em 2.8em;
+                    text-decoration: none;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    transition: box-shadow 300ms ease-in-out,
+                        color 300ms ease-in-out;
+
+                    &:hover {
+                        color: #fff;
+                        outline: 0;
+                        box-shadow: 0 0 40px 40px $black inset;
+                    }
+                }
+            }
+        }
+    }
+
+    &__aboutus {
+        padding: 100px 10px;
+        box-sizing: border-box;
+        background: #15a7d4 url(/img/aboutus-bg.jpg) center / cover no-repeat;
+        background-attachment: fixed;
+
+        &--content {
+            width: 615px;
+            background: $white;
+            text-align: center;
+            padding: 0 10px;
+            box-sizing: border-box;
+
+            & > h3 {
+                font-size: 40px;
+                font-weight: 700;
+                font-family: Source Sans Pro;
+                text-transform: uppercase;
+                margin: 50px 0;
+            }
+
+            & > p {
+                color: #20303c;
+                margin: 0 40px 40px;
+            }
+        }
+    }
+}
