@@ -34,6 +34,10 @@ $temp: #144d65;
         background: url(/img/bg-main.jpg) top center / cover no-repeat;
         background-attachment: fixed;
 
+        &.active {
+            padding-top: 70px;
+        }
+
         .header {
             height: 70px;
             background: rgba(255, 255, 255, 0.78);
@@ -46,6 +50,7 @@ $temp: #144d65;
                 left: 0;
                 transition: ease all 250ms;
                 animation: 0.5s alternate slidein;
+                z-index: 1;
 
                 @keyframes slidein {
                     from {
@@ -178,4 +183,6 @@ $temp: #144d65;
 
     @import 'aboutus.scss';
     @import 'teamdetails.scss';
+    @import 'contactus.scss';
+    @import 'footer.scss';
 }
