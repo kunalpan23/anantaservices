@@ -6,7 +6,7 @@
     "main": "index.html",
     "scripts": {
         "dev": "parcel src/index.html --open",
-        "build": "parcel build /src"
+        "build": "parcel build src/index.html"
     },
     "devDependencies": {
         "sass": "^1.17.3"
