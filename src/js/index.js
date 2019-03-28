@@ -1,9 +1,12 @@
 import '/style/index.scss';
-
+import AppendImages from './AppendGallery';
 const trackerElem = $('[a-tracker]'); // Navigation bar Elems
 const headerElem = $('[a-header]'); //Header Elem Selector
+const hambuger = document.querySelector('.hambuger');
+const listElem = document.querySelector('[a-nav]');
 
 $(window).on('load', e => {
+    AppendImages();
     const wow = new WOW({
         boxClass: 'wow', // default
         animateClass: 'animated', // default
@@ -18,6 +21,9 @@ $(window).on('load', e => {
         const THIS = $(this);
         // const target = $(THIS.attr('a-tracker'));
         const target = THIS.attr('a-tracker');
+        if (window.innerWidth < 570) {
+            listElem.classList.toggle('active');
+        }
         // perform animated scrolling by getting top-position of target-element and set it as scroll target
         $('html, body')
             .stop()
@@ -34,6 +40,14 @@ $(window).on('load', e => {
         return false;
     });
 });
+
+// For Displaying the hamburger in mobile view
+(e => {
+    hambuger.addEventListener('click', e => {
+        e.preventDefault();
+        listElem.classList.toggle('active');
+    });
+})();
 
 // $(document).on('scroll', e => {
 //     if ($('[a-aboutus]').offset().top - $(window).scrollTop() <= 0) {

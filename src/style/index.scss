@@ -5,6 +5,7 @@
 
 // Calling Vendor Css
 @import 'animation.scss';
+@import 'media.scss';
 
 html,
 body {
@@ -76,7 +77,33 @@ $temp: #144d65;
                 }
 
                 &--nav {
+                    &-hamburger {
+                        height: 40px;
+                        width: 40px;
+                        background: burlywood;
+                        display: none;
+                        cursor: pointer;
+
+                        @include breakpoint(550px, 0) {
+                            display: block;
+                        }
+                    }
+
                     &-list {
+                        @include breakpoint(550px, 0) {
+                            position: absolute;
+                            display: none;
+                            top: 70px;
+                            background: rgba(255, 255, 255, 0.78);
+                            left: 0;
+                            right: 0;
+                            text-align: center;
+                        }
+
+                        &.active {
+                            display: block;
+                        }
+
                         & > li {
                             position: relative;
                             transition: ease all 250ms;

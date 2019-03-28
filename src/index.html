@@ -8,7 +8,8 @@
             href="//fonts.googleapis.com/css?family=Montserrat:400,500,700|Source+Sans+Pro:700"
             rel="stylesheet"
         />
-        <title>Document</title>
+        <link rel="stylesheet" href="/style/jquery.flex-images.css" />
+        <title>Ananta Services</title>
     </head>
     <body>
         <main class="wrap">
@@ -19,14 +20,17 @@
                 >
                     <div class="header__inner flex justify-center align-center">
                         <div
-                            class="header__inner--logo flex flex_1 justify-start align-center"
+                            class="header__inner--logo flex justify-start align-center"
                         >
                             <img src="/img/logo.png" alt="Logo" />
                         </div>
                         <div
                             class="header__inner--nav flex flex_1 justify-end align-center"
                         >
-                            <ul class="header__inner--nav-list flex">
+                            <div
+                                class="header__inner--nav-hamburger hambuger"
+                            ></div>
+                            <ul class="header__inner--nav-list flex" a-nav>
                                 <li>
                                     <a href="#" a-tracker="home">
                                         HOME
@@ -206,6 +210,14 @@
                     </ul>
                 </div>
             </section>
+            <section class="wrap__gallery flex" a-gallery>
+                <div class="wrap__gallery--content">
+                    <ul
+                        class="wrap__gallery--content-galleryList flex-images"
+                        a-imgGallery
+                    ></ul>
+                </div>
+            </section>
             <section class="wrap__contactus flex" a-contactus>
                 <div
                     class="wrap__contactus--content flex justify-center align-center direction-column"
@@ -225,7 +237,9 @@
                                 <label>Name</label>
                             </div>
                         </div>
-                        <div class="flex justify-spaceBetween">
+                        <div
+                            class="flex justify-spaceBetween direction-column-sm"
+                        >
                             <div
                                 class="flex input-container-input wow slideInLeft"
                             >
@@ -285,6 +299,7 @@
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="/js/jquery.flex-images.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
         <script src="/js/index.js"></script>
     </body>

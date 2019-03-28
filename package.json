@@ -5,7 +5,7 @@
     },
     "main": "index.html",
     "scripts": {
-        "dev": "parcel src/index.html --open",
+        "dev": "parcel src/index.html --out-dir Dev-dist --open",
         "build": "parcel build src/index.html"
     },
     "devDependencies": {
