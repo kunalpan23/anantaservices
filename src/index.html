@@ -8,7 +8,6 @@
             href="//fonts.googleapis.com/css?family=Montserrat:400,500,700|Source+Sans+Pro:700"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="/style/jquery.flex-images.css" />
         <title>Ananta Services</title>
     </head>
     <body>
@@ -28,8 +27,13 @@
                             class="header__inner--nav flex flex_1 justify-end align-center"
                         >
                             <div
-                                class="header__inner--nav-hamburger hambuger"
-                            ></div>
+                                class="header__inner--nav-hamburger"
+                                a-hamburger
+                            >
+                                <div class="icon-one">
+                                    <div class="hamburger hamburger-one"></div>
+                                </div>
+                            </div>
                             <ul class="header__inner--nav-list flex" a-nav>
                                 <li>
                                     <a href="#" a-tracker="home">
@@ -39,6 +43,11 @@
                                 <li>
                                     <a href="#aboutus" a-tracker="aboutus">
                                         ABOUT US
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#gallery" a-tracker="gallery">
+                                        GALLERY
                                     </a>
                                 </li>
                                 <li>
@@ -131,6 +140,108 @@
                     </p>
                 </div>
             </section>
+            <section
+                class="wrap__gallery flex justify-center align-center"
+                a-gallery
+            >
+                <div class="wrap__gallery--content">
+                    <h3 class="wrap__gallery--content-heading">GALLERY</h3>
+                    <div
+                        class="wrap__gallery--content-galleryList gallery flex"
+                        a-imgGallery
+                    >
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-1.jpg"
+                                rel="group1"
+                                src="img/gallery/1.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-2.jpg"
+                                rel="group1"
+                                src="img/gallery/2.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-3.jpg"
+                                rel="group1"
+                                src="img/gallery/3.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-4.jpg"
+                                rel="group1"
+                                src="img/gallery/4.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-5.jpg"
+                                rel="group1"
+                                src="img/gallery/5.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-6.jpg"
+                                rel="group1"
+                                src="img/gallery/6.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-7.jpg"
+                                rel="group1"
+                                src="img/gallery/7.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-8.jpg"
+                                rel="group1"
+                                src="img/gallery/8.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-9.jpg"
+                                rel="group1"
+                                src="img/gallery/9.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-910.jpg"
+                                rel="group1"
+                                src="img/gallery/10.jpg"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="wrap__ourteam flex justify-center" a-ourteam>
                 <div
                     class="wrap__ourteam--content flex align-center direction-column"
@@ -208,14 +319,6 @@
                             </div>
                         </li>
                     </ul>
-                </div>
-            </section>
-            <section class="wrap__gallery flex" a-gallery>
-                <div class="wrap__gallery--content">
-                    <ul
-                        class="wrap__gallery--content-galleryList flex-images"
-                        a-imgGallery
-                    ></ul>
                 </div>
             </section>
             <section class="wrap__contactus flex" a-contactus>
@@ -299,7 +402,6 @@
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="/js/jquery.flex-images.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
         <script src="/js/index.js"></script>
     </body>
