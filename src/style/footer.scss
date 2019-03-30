@@ -5,11 +5,22 @@
     width: 100%;
     box-sizing: border-box;
 
+    @include breakpoint(815px, 0) {
+        flex-direction: column;
+    }
+
     &--inner {
         &-text {
             font-size: 12px;
             padding: 5px 0 5px 35px;
             position: relative;
+            display: flex;
+
+            @include breakpoint(815px, 0) {
+                padding: 5px;
+                text-align: center;
+                justify-content: center;
+            }
 
             a {
                 color: $white;
@@ -21,8 +32,8 @@
 
             &.call:before {
                 content: '\2706';
-                position: absolute;
-                left: 8px;
+                position: relative;
+                margin-right: 5px;
                 font-size: 22px;
                 line-height: 17px;
             }
@@ -32,8 +43,12 @@
                 background: url(/img/location.png) center / contain no-repeat;
                 height: 17px;
                 width: 19px;
-                position: absolute;
-                left: 8px;
+                position: relative;
+                margin-right: 5px;
+
+                @include breakpoint(815px, 0) {
+                    display: none;
+                }
             }
         }
     }

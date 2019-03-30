@@ -5,6 +5,7 @@
 
 // Calling Vendor Css
 @import 'animation.scss';
+@import 'media.scss';
 
 html,
 body {
@@ -33,6 +34,10 @@ $temp: #144d65;
         height: 100vh;
         background: url(/img/bg-main.jpg) top center / cover no-repeat;
         background-attachment: fixed;
+
+        @include breakpoint(700px, 0) {
+            background-position: 0 0;
+        }
 
         &.active {
             padding-top: 70px;
@@ -76,7 +81,89 @@ $temp: #144d65;
                 }
 
                 &--nav {
+                    &-hamburger {
+                        height: 70px;
+                        width: 50px;
+                        display: none;
+                        cursor: pointer;
+                        position: relative;
+
+                        @include breakpoint(700px, 0) {
+                            display: block;
+                        }
+
+                        .icon-one {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 50px;
+                            height: 70px;
+                            cursor: pointer;
+
+                            &.active-one .hamburger-one {
+                                background: rgba(0, 0, 0, 0);
+                                box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+
+                                &:before {
+                                    top: 0;
+                                    transform: rotate(45deg);
+                                }
+
+                                &:after {
+                                    top: 0;
+                                    transform: rotate(135deg);
+                                    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+                                }
+                            }
+
+                            .hamburger {
+                                top: 50%;
+                                left: 10%;
+                                width: 40px;
+                                height: 6px;
+                                background: $black;
+                                position: absolute;
+                                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                                transition: 0.5s;
+
+                                &:before {
+                                    top: -10px;
+                                }
+
+                                &:after {
+                                    top: 10px;
+                                }
+
+                                &:before,
+                                &:after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 40px;
+                                    height: 6px;
+                                    background: $black;
+                                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                                    transition: 0.5s;
+                                }
+                            }
+                        }
+                    }
+
                     &-list {
+                        @include breakpoint(700px, 0) {
+                            position: absolute;
+                            display: none;
+                            top: 70px;
+                            background: rgba(255, 255, 255, 0.78);
+                            left: 0;
+                            right: 0;
+                            text-align: center;
+                            z-index: 1;
+                        }
+
+                        &.active {
+                            display: block;
+                        }
+
                         & > li {
                             position: relative;
                             transition: ease all 250ms;
@@ -115,11 +202,24 @@ $temp: #144d65;
             height: 100%;
             box-sizing: border-box;
 
+            @include breakpoint(815px, 0) {
+                padding-top: 60px;
+            }
+
+            @include breakpoint(700px, 0) {
+                height: auto;
+                padding-top: 100px;
+            }
+
             .intro {
                 width: 1200px;
                 padding: 0 10px;
                 box-sizing: border-box;
                 margin: auto;
+
+                @include breakpoint(700px, 0px) {
+                    width: 100%;
+                }
 
                 &__content {
                     &-heading {
@@ -148,6 +248,10 @@ $temp: #144d65;
                 height: 100%;
                 box-sizing: border-box;
                 padding-bottom: 20px;
+
+                @include breakpoint(700px, 0px) {
+                    display: none;
+                }
 
                 & > a {
                     box-sizing: border-box;
@@ -183,6 +287,7 @@ $temp: #144d65;
 
     @import 'aboutus.scss';
     @import 'teamdetails.scss';
+    @import 'gallery.scss';
     @import 'contactus.scss';
     @import 'footer.scss';
 }

@@ -24,6 +24,12 @@
             }
         }
 
+        .direction-column-sm {
+            @include breakpoint(550px, 0) {
+                flex-direction: column;
+            }
+        }
+
         .input-container {
             width: 100%;
             padding: 0 10px;

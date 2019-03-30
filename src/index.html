@@ -8,7 +8,7 @@
             href="//fonts.googleapis.com/css?family=Montserrat:400,500,700|Source+Sans+Pro:700"
             rel="stylesheet"
         />
-        <title>Document</title>
+        <title>Ananta Services</title>
     </head>
     <body>
         <main class="wrap">
@@ -19,14 +19,22 @@
                 >
                     <div class="header__inner flex justify-center align-center">
                         <div
-                            class="header__inner--logo flex flex_1 justify-start align-center"
+                            class="header__inner--logo flex justify-start align-center"
                         >
                             <img src="/img/logo.png" alt="Logo" />
                         </div>
                         <div
                             class="header__inner--nav flex flex_1 justify-end align-center"
                         >
-                            <ul class="header__inner--nav-list flex">
+                            <div
+                                class="header__inner--nav-hamburger"
+                                a-hamburger
+                            >
+                                <div class="icon-one">
+                                    <div class="hamburger hamburger-one"></div>
+                                </div>
+                            </div>
+                            <ul class="header__inner--nav-list flex" a-nav>
                                 <li>
                                     <a href="#" a-tracker="home">
                                         HOME
@@ -35,6 +43,11 @@
                                 <li>
                                     <a href="#aboutus" a-tracker="aboutus">
                                         ABOUT US
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#gallery" a-tracker="gallery">
+                                        GALLERY
                                     </a>
                                 </li>
                                 <li>
@@ -125,6 +138,108 @@
                         where we provide 3 yrs of practical Training on Job
                         compled with theoritical workshops.
                     </p>
+                </div>
+            </section>
+            <section
+                class="wrap__gallery flex justify-center align-center"
+                a-gallery
+            >
+                <div class="wrap__gallery--content">
+                    <h3 class="wrap__gallery--content-heading">GALLERY</h3>
+                    <div
+                        class="wrap__gallery--content-galleryList gallery flex"
+                        a-imgGallery
+                    >
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-1.jpg"
+                                rel="group1"
+                                src="img/gallery/1.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-2.jpg"
+                                rel="group1"
+                                src="img/gallery/2.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-3.jpg"
+                                rel="group1"
+                                src="img/gallery/3.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-4.jpg"
+                                rel="group1"
+                                src="img/gallery/4.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-5.jpg"
+                                rel="group1"
+                                src="img/gallery/5.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-6.jpg"
+                                rel="group1"
+                                src="img/gallery/6.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-7.jpg"
+                                rel="group1"
+                                src="img/gallery/7.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-8.jpg"
+                                rel="group1"
+                                src="img/gallery/8.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-9.jpg"
+                                rel="group1"
+                                src="img/gallery/9.jpg"
+                            />
+                        </div>
+
+                        <div class="gallery-item">
+                            <img
+                                class="pics"
+                                data-glisse-big="big-910.jpg"
+                                rel="group1"
+                                src="img/gallery/10.jpg"
+                            />
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="wrap__ourteam flex justify-center" a-ourteam>
@@ -225,7 +340,9 @@
                                 <label>Name</label>
                             </div>
                         </div>
-                        <div class="flex justify-spaceBetween">
+                        <div
+                            class="flex justify-spaceBetween direction-column-sm"
+                        >
                             <div
                                 class="flex input-container-input wow slideInLeft"
                             >
