@@ -30,7 +30,7 @@ $(window).on('load', e => {
         const THIS = $(this);
         // const target = $(THIS.attr('a-tracker'));
         const target = THIS.attr('a-tracker');
-        if (window.innerWidth < 570) {
+        if (window.innerWidth < 800) {
             listElem.classList.toggle('active');
             document.querySelector('.icon-one').classList.toggle('active-one');
         }
